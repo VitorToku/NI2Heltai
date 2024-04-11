@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pizza do zé"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtNumeroPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nº do pedido: 1830"
+        android:textColor="#000000" />
+
+    <ProgressBar
+        android:id="@+id/pbPedido"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="3"
+        android:progress="0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/inputNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Escreva seu nome"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/txtPizza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pizza"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/rgPizza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbFrango"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Frango" />
+
+                    <RadioButton
+                        android:id="@+id/rbCalabresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Calabresa" />
+
+                    <RadioButton
+                        android:id="@+id/rbQueijo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4 Queijos" />
+
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imgPizza"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/pizza" />
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/swcBordaRecheada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Borda recheada (Requeijão)"
+                tools:checked="false" />
+
+            <TextView
+                android:id="@+id/txtPorcao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Porções"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/rgPorcoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbFritas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fritas" />
+
+                    <RadioButton
+                        android:id="@+id/rbMandioca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mandioca" />
+
+                    <RadioButton
+                        android:id="@+id/rbPolenta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Polenta" />
+
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imgPorcao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/porcao_polenta_frita" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtBebida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bebidas"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/rgBebida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbGuarana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Guaraná" />
+
+                    <RadioButton
+                        android:id="@+id/rbCoca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coca-Cola" />
+
+                    <RadioButton
+                        android:id="@+id/rbFanta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fanta" />
+
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/imgBebida"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/bebida" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtObs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Observações:"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.521" />
+
+                <EditText
+                    android:id="@+id/inputObs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:ems="10"
+                    android:hint="ex: sem cebola, sem borda"
+                    android:inputType="textPersonName"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/txtObs"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btnFinalizar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="finalizarPedido"
+                android:text="Finalizar Pedido" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancelar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
